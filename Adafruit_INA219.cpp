@@ -370,6 +370,7 @@ void Adafruit_INA219::begin(TwoWire *theWire) {
  */
 void Adafruit_INA219::init() {
   _i2c->begin();
+  _i2c->setClock(400000);
   // Set chip to large range config values to start
   setCalibration_32V_2A();
 }
